@@ -1,113 +1,270 @@
 module.exports = 
 {
-  "base": "",
-  "title": "服务端Wiki",
-  "description": "服务端Wiki",
-  "dest": "dist",
-  "themeConfig": {
-    "displayAllHeaders": "true",
-    "logo": "/assets/img/logo.png",
-    "nav": [{
-      "text": "团队",
-      "link": "/team/",
-      "ariaLabel": "Team"
-
-    }, {
-      "text": "技术",
-      "link": "/tech/",
-      "ariaLabel": "tech",
-      "items": [{
-        "text": "自研组件",
-        "link": "/tech/module/"
-      }, {
-        "text": "技术分享",
-        "link": "/tech/share/"
-      }]
-    }, {
-      "text": "项目",
-      "link": "/project/",
-      "ariaLabel": "project",
-      "items": [{
-        "text": "TodoList",
-        "link": "/project/todo/"
-      }, {
-        "text": "项目复盘",
-        "link": "/project/replay/"
-      }]
-    }, {
-      "text": "规划",
-      "link": "/plan/",
-      "ariaLabel": "plan",
-      "items": [{
-        "text": "技术规划",
-        "link": "/plan/tech/"
-      }, {
-        "text": "业务规划",
-        "link": "/plan/business/"
-      }]
-    }, {
-      "text": "资源",
-      "link": "/resource/"
-    }],
-    "sidebar": {
-      "/team/": [{
-        "title": "团队",
-        "path": "/team/",
-        "sidebarDepth": 2,
-        "children": [{
-          "title": "团队介绍",
-          "path": "/team/intro/",
-          "children": [{
-            "title": "团队介绍",
-            "path": "/team/intro/tuanduijieshao"
-          }, {
-            "title": "业务介绍",
-            "path": "/team/intro/yewujieshao"
-          }]
-        }, {
-          "title": "新人引导",
-          "path": "/team/new/",
-          "children": [{
-            "title": "入职引导",
-            "path": "/team/new/ruzhiyindao"
-          }, {
-            "title": "名词解释",
-            "path": "/team/new/mingcijieshi"
-          }]
-        }]
-      }],
-        "/tech/": [{
-        "title": "技术",
-        "path": "/tech/",
-        "sidebarDepth": 2,
-        "children": [{
-          "title": "组件",
-          "path": "/tech/module/",
-          "children": [{
-            "title": "组件清单",
-            "path": "/tech/module/zujianqingdan"
-          }]
-        }, {
-          "title": "分享",
-          "path": "/tech/share/",
-          "children": [{
-            "title": "技术分享",
-            "path": "/tech/share/jishufenxiang"
-          }, {
-            "title": "学习总结",
-            "path": "/tech/share/xuexizongjie"
-          }]
-        }]
-      }]
+    "base":"",
+    "title":"服务端Wiki",
+    "description":"服务端Wiki",
+    "dest":"dist",
+    "themeConfig":{
+        "displayAllHeaders":"true",
+        "logo":"/assets/img/logo.png",
+        "nav":[
+            {
+                "text":"团队",
+                "link":"/team/",
+                "ariaLabel":"Team"
+            },
+            {
+                "text":"技术",
+                "link":"/tech/",
+                "ariaLabel":"tech",
+                "items":[
+                    {
+                        "text":"组件",
+                        "link":"/tech/module/"
+                    },
+                    {
+                        "text":"分享",
+                        "link":"/tech/share/"
+                    },
+                    {
+                        "text":"Todo",
+                        "link":"/tech/todo/"
+                    }
+                ]
+            },
+            {
+                "text":"项目",
+                "link":"/project/",
+                "ariaLabel":"project",
+                "items":[
+                    {
+                        "text":"TodoList",
+                        "link":"/project/todo/"
+                    },
+                    {
+                        "text":"项目复盘",
+                        "link":"/project/replay/"
+                    }
+                ]
+            },
+            {
+                "text":"规划",
+                "link":"/plan/",
+                "ariaLabel":"plan",
+                "items":[
+                    {
+                        "text":"技术规划",
+                        "link":"/plan/tech/"
+                    },
+                    {
+                        "text":"业务规划",
+                        "link":"/plan/business/"
+                    }
+                ]
+            },
+            {
+                "text":"资源",
+                "link":"/resource/"
+            }
+        ],
+        "sidebar":{
+            "/team/":[
+                {
+                    "title":"团队",
+                    "collapsable":"true",
+                    "path":"/team/",
+                    "sidebarDepth":2,
+                    "children":[
+                        {
+                            "title":"团队介绍",
+                            "path":"/team/intro/",
+                            "children":[
+                                {
+                                    "title":"团队介绍",
+                                    "path":"/team/intro/tuanduijieshao"
+                                },
+                                {
+                                    "title":"业务介绍",
+                                    "path":"/team/intro/yewujieshao"
+                                }
+                            ]
+                        },
+                        {
+                            "title":"新人引导",
+                            "path":"/team/new/",
+                            "children":[
+                                {
+                                    "title":"入职引导",
+                                    "path":"/team/new/ruzhiyindao"
+                                },
+                                {
+                                    "title":"名词解释",
+                                    "path":"/team/new/mingcijieshi"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "/tech/module/":[
+                {
+                    "title":"组件",
+                    "path":"/tech/module/",
+                    "children":[
+                        {
+                            "title":"中间件",
+                            "path":"/tech/module/middle/",
+                            "children":[
+                                {
+                                    "title":"ID生成器",
+                                    "path":"/tech/module/middle/idcreate"
+                                }
+                            ]
+                        },
+                        {
+                            "title":"数据库",
+                            "path":"/tech/module/dba/",
+                            "children":[
+                                {
+                                    "title":"DTS",
+                                    "path":"/tech/module/dba/dba"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "/tech/share/":[
+                {
+                    "title":"分享",
+                    "path":"/tech/share/",
+                    "children":[
+                        {
+                            "title":"技术分享",
+                            "path":"/tech/share/techshare/",
+                            "children":[
+                                {
+                                    "title":"数据库分享",
+                                    "path":"/tech/share/techshare/dba"
+                                }
+                            ]
+                        },
+                        {
+                            "title":"其他分享",
+                            "path":"/tech/share/othershare/",
+                            "children":[
+                                {
+                                    "title":"摄影分享",
+                                    "path":"/tech/share/othershare/photo"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title":"学习",
+                    "path":"/tech/share/study",
+                    "children":[
+                        {
+                            "title":"架构训练营",
+                            "path":"/tech/share/study/camp"
+                        }
+                    ]
+                }
+            ],
+            "/tech/todo/":[
+                {
+                    "title":"Todo",
+                    "path":"/tech/todo/",
+                    "children":[
+                        {
+                            "title":"业务优化Todo",
+                            "path":"/tech/todo/business",
+                            "children":[
+                                {
+                                    "title":"性能优化一期",
+                                    "path":"/tech/todo/business/1"
+                                }
+                            ]
+                        },
+                        {
+                            "title":"架构优化Todo",
+                            "path":"/tech/todo/framework",
+                            "children":[
+                                {
+                                    "title":"架构优化一期",
+                                    "path":"/tech/todo/framework/1"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "/project/todo/":[
+                {
+                    "title":"Todo",
+                    "path":"/project/todo/",
+                    "children":[
+                        {
+                            "title":"项目待做",
+                            "path":"/project/todo/pr/",
+                            "children":[
+                                {
+                                    "title":"待做清单",
+                                    "path":"/project/todo/pr/yewuyouhua"
+                                }
+                            ]
+                        },
+                        {
+                            "title":"性能待做",
+                            "path":"/project/todo/xingneng/",
+                            "children":[
+                                {
+                                    "title":"待做清单",
+                                    "path":"/project/todo/xingneng/yewuyouhua"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "/project/replay/":[
+                {
+                    "title":"复盘",
+                    "path":"/project/replay/",
+                    "children":[
+                        {
+                            "title":"迭代复盘",
+                            "path":"/project/replay/diedai/",
+                            "children":[
+                                {
+                                    "title":"A迭代复盘",
+                                    "path":"/project/replay/diedai/fupan"
+                                }
+                            ]
+                        },
+                        {
+                            "title":"事故复盘",
+                            "path":"/project/replay/shigu/",
+                            "children":[
+                                {
+                                    "title":"今日事故复盘",
+                                    "path":"/project/replay/shigu/fupan"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "configureWebpack":{
+        "resolve":{
+            "alias":{
+                "@img":"assets/img",
+                "@css":"assets/css",
+                "@js":"assets/js"
+            }
+        }
     }
-  },
-  "configureWebpack": {
-    "resolve": {
-      "alias": {
-        "@img": "assets/img",
-        "@css": "assets/css",
-        "@js": "assets/js"
-      }
-    }
-  }
 }
