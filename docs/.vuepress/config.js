@@ -6,7 +6,7 @@ module.exports =
   "dest": "dist",
   "themeConfig": {
     "displayAllHeaders": "true",
-    "logo": "assets/img/logo.png",
+    "logo": "/assets/img/logo.png",
     "nav": [{
       "text": "团队",
       "link": "/team/",
