@@ -34,13 +34,14 @@ module.exports =
                 "ariaLabel": "tech",
                 "items": [
                     {
-                        "text": "约定规范",
-                        "link": "/tech/rule/"
-                    },
-                    {
                         "text": "研发助手",
                         "link": "/tech/assistant/"
                     },
+                    {
+                        "text": "约定规范",
+                        "link": "/tech/rule/"
+                    },
+                    
                     {
                         "text": "研发流程",
                         "link": "/tech/flow/"
